@@ -1,0 +1,58 @@
+name: AirSlide
+options:
+  bundleIdPrefix: com.airslide
+  deploymentTarget:
+    macOS: "15.0"
+    iOS: "18.0"
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    DEVELOPMENT_TEAM: RDN8P74D45
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+targets:
+  AirSlide:
+    type: application
+    platform: macOS
+    sources: [Mac, Shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.airslide.mac
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        CODE_SIGN_STYLE: Automatic
+        ENABLE_HARDENED_RUNTIME: YES
+        INFOPLIST_KEY_CFBundleDisplayName: AirSlide
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.utilities
+        INFOPLIST_KEY_NSDesktopFolderUsageDescription: AirSlide saves the files you slide from your iPhone to your Desktop.
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: AirSlide receives files from your paired iPhone over your local Wi-Fi.
+    info:
+      path: Mac/Info.plist
+      properties:
+        NSBonjourServices: ["_airslide._tcp"]
+        CFBundleURLTypes:
+          - CFBundleURLSchemes: [airslide]
+  AirSlideiOS:
+    type: application
+    platform: iOS
+    sources: [iOS, Shared]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.airslide.ios
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: YES
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_CFBundleDisplayName: AirSlide
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_NSCameraUsageDescription: AirSlide scans the QR code on your Mac to pair.
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: AirSlide sends files to your paired Mac over your local Wi-Fi.
+        INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription: AirSlide saves photos and videos you slide from your Mac.
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+    info:
+      path: iOS/Info.plist
+      properties:
+        NSBonjourServices: ["_airslide._tcp"]
+        UIFileSharingEnabled: true
+        LSSupportsOpeningDocumentsInPlace: true
+        CFBundleURLTypes:
+          - CFBundleURLSchemes: [airslide]

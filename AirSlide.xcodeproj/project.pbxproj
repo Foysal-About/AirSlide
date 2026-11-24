@@ -1,0 +1,526 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11748772250A8CACE6610EAF /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE091E2710B412E319FF8F82 /* Ghost.swift */; };
+		1DD35B01174B42C9BDEA043E /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8883D1F0ACAEFF2717DA4 /* FileWriter.swift */; };
+		1F54A5CBDFE70875448D386A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4000D3B04218252D3085FD08 /* Assets.xcassets */; };
+		251DA49E9819EF569394E21F /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA37CC280DD118E6419936D /* QRScannerView.swift */; };
+		2AA9E22C61C0EA97C206F005 /* PeerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606338E20AD9A5322AC07F9 /* PeerStore.swift */; };
+		34A5AF815447DCD0CDD9538E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E6D05E0F965398C94E218 /* Session.swift */; };
+		3B0F6FE354EA43732F8E979F /* PeerStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6606338E20AD9A5322AC07F9 /* PeerStore.swift */; };
+		4797DA3798B7620B4F756671 /* SecureTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD788C769C5BB12620DCB80 /* SecureTransport.swift */; };
+		4ACDF0B4AC8A35091268A6D9 /* PairingPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C028373E3F49062AB7379 /* PairingPayload.swift */; };
+		4ED62BE4A99D771E58EBBFB3 /* AirSlideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4E155278DE8C842D0B42C5 /* AirSlideApp.swift */; };
+		52F0A44D500F1426221260D5 /* AirDropRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A16D6E15618996315E8770 /* AirDropRings.swift */; };
+		59121ED70AD2C145D83ACBE3 /* Thumbnailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE521CDAED2960C408E867 /* Thumbnailer.swift */; };
+		618B337AD951D5A488F8BC95 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADEDD2BCC22B9D069D1FF5 /* Theme.swift */; };
+		6F4197EACF5310D778C5F0D6 /* Wire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438ADA8411330AA65F88C31 /* Wire.swift */; };
+		71F846709568CC8481EC2843 /* SecureTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD788C769C5BB12620DCB80 /* SecureTransport.swift */; };
+		725CCA39AC75F921421892DD /* Thumbnailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFAE521CDAED2960C408E867 /* Thumbnailer.swift */; };
+		82EC3843F922441620581A31 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E6D05E0F965398C94E218 /* Session.swift */; };
+		839D6537F42496F5BC5353BB /* PhoneLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24B5D4AD928EF5D45727D67 /* PhoneLink.swift */; };
+		861BBEF00432DC269D18EF06 /* EdgePortal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAFC93DCA3469A5998386406 /* EdgePortal.swift */; };
+		A88298EC1DF3779B2B253F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E561E81DE741BEA78C3683 /* Assets.xcassets */; };
+		AB9FFFB7FB69B21CFB103E91 /* ReceiverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A42EEDD1802B29C602BCB0 /* ReceiverService.swift */; };
+		AD8551EBEAB362CB767596D0 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFADEDD2BCC22B9D069D1FF5 /* Theme.swift */; };
+		B543D246993FCCA8F8C70D34 /* Wire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9438ADA8411330AA65F88C31 /* Wire.swift */; };
+		C3DB5ACE3197DABF66545FB6 /* Ghost.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE091E2710B412E319FF8F82 /* Ghost.swift */; };
+		C5E3B503FAE07AD86E7861FE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CAB32E06CE4160BBE895BC /* MainView.swift */; };
+		CB1E16B3CFAF5A4347D59CCF /* AirSlideiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675FC970E8E8F3A97E1195D /* AirSlideiOSApp.swift */; };
+		CB7E68CB32FFD5493AB18B33 /* ArrivalOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C58E5E661D12700CF35356B /* ArrivalOverlayView.swift */; };
+		DC62DEB5810F52117B21B9A9 /* PairingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770FBEEEE747F41FAE3CB7ED /* PairingCard.swift */; };
+		EEE95B8F86ACD47CD8077CFA /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D8883D1F0ACAEFF2717DA4 /* FileWriter.swift */; };
+		F05918F0145286694B3F3DFD /* PairingPayload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552C028373E3F49062AB7379 /* PairingPayload.swift */; };
+		FFDB5FEA7F739549FE581FA8 /* AirDropRings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A16D6E15618996315E8770 /* AirDropRings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		37A16D6E15618996315E8770 /* AirDropRings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirDropRings.swift; sourceTree = "<group>"; };
+		37C6CFB3A7D9BBD6A1F46378 /* AirSlideiOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = AirSlideiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4000D3B04218252D3085FD08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		552C028373E3F49062AB7379 /* PairingPayload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingPayload.swift; sourceTree = "<group>"; };
+		5C58E5E661D12700CF35356B /* ArrivalOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrivalOverlayView.swift; sourceTree = "<group>"; };
+		628E6D05E0F965398C94E218 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		62D8883D1F0ACAEFF2717DA4 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		6606338E20AD9A5322AC07F9 /* PeerStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeerStore.swift; sourceTree = "<group>"; };
+		66CAB32E06CE4160BBE895BC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		6AD788C769C5BB12620DCB80 /* SecureTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTransport.swift; sourceTree = "<group>"; };
+		770FBEEEE747F41FAE3CB7ED /* PairingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairingCard.swift; sourceTree = "<group>"; };
+		7DE38FFF0A8CDF5C898BD48C /* AirSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9438ADA8411330AA65F88C31 /* Wire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wire.swift; sourceTree = "<group>"; };
+		98A42EEDD1802B29C602BCB0 /* ReceiverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverService.swift; sourceTree = "<group>"; };
+		AAFC93DCA3469A5998386406 /* EdgePortal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdgePortal.swift; sourceTree = "<group>"; };
+		BB29E77C0005D0046EC870A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BE091E2710B412E319FF8F82 /* Ghost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ghost.swift; sourceTree = "<group>"; };
+		C24B5D4AD928EF5D45727D67 /* PhoneLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneLink.swift; sourceTree = "<group>"; };
+		C4A6907D21777F902F3DE239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C675FC970E8E8F3A97E1195D /* AirSlideiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirSlideiOSApp.swift; sourceTree = "<group>"; };
+		CFAE521CDAED2960C408E867 /* Thumbnailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbnailer.swift; sourceTree = "<group>"; };
+		DAA37CC280DD118E6419936D /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		DFADEDD2BCC22B9D069D1FF5 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		E3E561E81DE741BEA78C3683 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB4E155278DE8C842D0B42C5 /* AirSlideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirSlideApp.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		6CCA1EE3A12EB5207AAEEBBE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C675FC970E8E8F3A97E1195D /* AirSlideiOSApp.swift */,
+				4000D3B04218252D3085FD08 /* Assets.xcassets */,
+				BB29E77C0005D0046EC870A7 /* Info.plist */,
+				C24B5D4AD928EF5D45727D67 /* PhoneLink.swift */,
+				DAA37CC280DD118E6419936D /* QRScannerView.swift */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		79EE5CB030C22E0CC962B920 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				EB4E155278DE8C842D0B42C5 /* AirSlideApp.swift */,
+				5C58E5E661D12700CF35356B /* ArrivalOverlayView.swift */,
+				E3E561E81DE741BEA78C3683 /* Assets.xcassets */,
+				AAFC93DCA3469A5998386406 /* EdgePortal.swift */,
+				C4A6907D21777F902F3DE239 /* Info.plist */,
+				66CAB32E06CE4160BBE895BC /* MainView.swift */,
+				770FBEEEE747F41FAE3CB7ED /* PairingCard.swift */,
+				98A42EEDD1802B29C602BCB0 /* ReceiverService.swift */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		883EAC748BBF29E5A804B844 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				37A16D6E15618996315E8770 /* AirDropRings.swift */,
+				62D8883D1F0ACAEFF2717DA4 /* FileWriter.swift */,
+				BE091E2710B412E319FF8F82 /* Ghost.swift */,
+				552C028373E3F49062AB7379 /* PairingPayload.swift */,
+				6606338E20AD9A5322AC07F9 /* PeerStore.swift */,
+				6AD788C769C5BB12620DCB80 /* SecureTransport.swift */,
+				628E6D05E0F965398C94E218 /* Session.swift */,
+				DFADEDD2BCC22B9D069D1FF5 /* Theme.swift */,
+				CFAE521CDAED2960C408E867 /* Thumbnailer.swift */,
+				9438ADA8411330AA65F88C31 /* Wire.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CDB00282A598BFF47352EA43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DE38FFF0A8CDF5C898BD48C /* AirSlide.app */,
+				37C6CFB3A7D9BBD6A1F46378 /* AirSlideiOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDD8FF7890E90FA14585DD39 = {
+			isa = PBXGroup;
+			children = (
+				6CCA1EE3A12EB5207AAEEBBE /* iOS */,
+				79EE5CB030C22E0CC962B920 /* Mac */,
+				883EAC748BBF29E5A804B844 /* Shared */,
+				CDB00282A598BFF47352EA43 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		82155F06ADA8CB96A39F0955 /* AirSlideiOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 746EA58DB75C077DCD74FBA6 /* Build configuration list for PBXNativeTarget "AirSlideiOS" */;
+			buildPhases = (
+				697EA4AD9D5D57594749BCBC /* Sources */,
+				AEE7C3A4B2A5A23FB09E97B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirSlideiOS;
+			packageProductDependencies = (
+			);
+			productName = AirSlideiOS;
+			productReference = 37C6CFB3A7D9BBD6A1F46378 /* AirSlideiOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9CD14EE98BEA441F1C2353B /* AirSlide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E559EB78D55DE7854044BED7 /* Build configuration list for PBXNativeTarget "AirSlide" */;
+			buildPhases = (
+				BA0BAB073CD773E2A7C29849 /* Sources */,
+				56A5111897D6891A9EA931B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirSlide;
+			packageProductDependencies = (
+			);
+			productName = AirSlide;
+			productReference = 7DE38FFF0A8CDF5C898BD48C /* AirSlide.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2535714C802BEDABA1E7D7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					82155F06ADA8CB96A39F0955 = {
+						DevelopmentTeam = RDN8P74D45;
+					};
+					C9CD14EE98BEA441F1C2353B = {
+						DevelopmentTeam = RDN8P74D45;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = EE212D54AA262FAB7A914035 /* Build configuration list for PBXProject "AirSlide" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = FDD8FF7890E90FA14585DD39;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CDB00282A598BFF47352EA43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9CD14EE98BEA441F1C2353B /* AirSlide */,
+				82155F06ADA8CB96A39F0955 /* AirSlideiOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		56A5111897D6891A9EA931B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A88298EC1DF3779B2B253F87 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEE7C3A4B2A5A23FB09E97B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F54A5CBDFE70875448D386A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		697EA4AD9D5D57594749BCBC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F0A44D500F1426221260D5 /* AirDropRings.swift in Sources */,
+				CB1E16B3CFAF5A4347D59CCF /* AirSlideiOSApp.swift in Sources */,
+				1DD35B01174B42C9BDEA043E /* FileWriter.swift in Sources */,
+				11748772250A8CACE6610EAF /* Ghost.swift in Sources */,
+				4ACDF0B4AC8A35091268A6D9 /* PairingPayload.swift in Sources */,
+				2AA9E22C61C0EA97C206F005 /* PeerStore.swift in Sources */,
+				839D6537F42496F5BC5353BB /* PhoneLink.swift in Sources */,
+				251DA49E9819EF569394E21F /* QRScannerView.swift in Sources */,
+				71F846709568CC8481EC2843 /* SecureTransport.swift in Sources */,
+				34A5AF815447DCD0CDD9538E /* Session.swift in Sources */,
+				AD8551EBEAB362CB767596D0 /* Theme.swift in Sources */,
+				59121ED70AD2C145D83ACBE3 /* Thumbnailer.swift in Sources */,
+				6F4197EACF5310D778C5F0D6 /* Wire.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0BAB073CD773E2A7C29849 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDB5FEA7F739549FE581FA8 /* AirDropRings.swift in Sources */,
+				4ED62BE4A99D771E58EBBFB3 /* AirSlideApp.swift in Sources */,
+				CB7E68CB32FFD5493AB18B33 /* ArrivalOverlayView.swift in Sources */,
+				861BBEF00432DC269D18EF06 /* EdgePortal.swift in Sources */,
+				EEE95B8F86ACD47CD8077CFA /* FileWriter.swift in Sources */,
+				C3DB5ACE3197DABF66545FB6 /* Ghost.swift in Sources */,
+				C5E3B503FAE07AD86E7861FE /* MainView.swift in Sources */,
+				DC62DEB5810F52117B21B9A9 /* PairingCard.swift in Sources */,
+				F05918F0145286694B3F3DFD /* PairingPayload.swift in Sources */,
+				3B0F6FE354EA43732F8E979F /* PeerStore.swift in Sources */,
+				AB9FFFB7FB69B21CFB103E91 /* ReceiverService.swift in Sources */,
+				4797DA3798B7620B4F756671 /* SecureTransport.swift in Sources */,
+				82EC3843F922441620581A31 /* Session.swift in Sources */,
+				618B337AD951D5A488F8BC95 /* Theme.swift in Sources */,
+				725CCA39AC75F921421892DD /* Thumbnailer.swift in Sources */,
+				B543D246993FCCA8F8C70D34 /* Wire.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0F88788DCD892BFFA90D8238 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirSlide;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AirSlide scans the QR code on your Mac to pair.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirSlide sends files to your paired Mac over your local Wi-Fi.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "AirSlide saves photos and videos you slide from your Mac.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.airslide.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2775BA33FD587ABD3B11D308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = RDN8P74D45;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		53D952ECC290D8D560258127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirSlide;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "AirSlide saves the files you slide from your iPhone to your Desktop.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirSlide receives files from your paired iPhone over your local Wi-Fi.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.airslide.mac;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		62EB9C525B69912CD131ACDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = RDN8P74D45;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MACOSX_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		83B033E2C96CA226F096B2B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mac/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirSlide;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSDesktopFolderUsageDescription = "AirSlide saves the files you slide from your iPhone to your Desktop.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirSlide receives files from your paired iPhone over your local Wi-Fi.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.airslide.mac;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		8F59F519DA1D772968B2A70C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iOS/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = AirSlide;
+				INFOPLIST_KEY_NSCameraUsageDescription = "AirSlide scans the QR code on your Mac to pair.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "AirSlide sends files to your paired Mac over your local Wi-Fi.";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "AirSlide saves photos and videos you slide from your Mac.";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.airslide.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		746EA58DB75C077DCD74FBA6 /* Build configuration list for PBXNativeTarget "AirSlideiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F88788DCD892BFFA90D8238 /* Debug */,
+				8F59F519DA1D772968B2A70C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E559EB78D55DE7854044BED7 /* Build configuration list for PBXNativeTarget "AirSlide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53D952ECC290D8D560258127 /* Debug */,
+				83B033E2C96CA226F096B2B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		EE212D54AA262FAB7A914035 /* Build configuration list for PBXProject "AirSlide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2775BA33FD587ABD3B11D308 /* Debug */,
+				62EB9C525B69912CD131ACDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2535714C802BEDABA1E7D7B /* Project object */;
+}
