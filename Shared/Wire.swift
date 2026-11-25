@@ -1,5 +1,6 @@
 import Foundation
 import CryptoKit
+import Network
 
 enum Wire {
     static let service = "_airslide._tcp"
@@ -7,6 +8,13 @@ enum Wire {
     static let chunkSize = 256 * 1024
     static let kindMessage: UInt8 = 0
     static let kindData: UInt8 = 1
+
+    /// TCP that can also run over peer-to-peer Wi-Fi (AWDL), so nearby devices connect even on different networks.
+    static var params: NWParameters {
+        let p = NWParameters.tcp
+        p.includePeerToPeer = true
+        return p
+    }
 }
 
 /// JSON control messages. File bytes travel as separate `kindData` frames.

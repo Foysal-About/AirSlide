@@ -92,7 +92,7 @@ final class ReceiverService: ObservableObject {
             options: .userInitiated, reason: "AirSlide is listening for files from paired iPhones")
         edge = edge ?? EdgePortal(service: self)
         do {
-            let l = try NWListener(using: .tcp)
+            let l = try NWListener(using: Wire.params)
             l.service = NWListener.Service(name: identity.id, type: Wire.service,
                                            txtRecord: NWTXTRecord(["id": identity.id, "name": identity.name]))
             l.stateUpdateHandler = { [weak self] s in Task { @MainActor in self?.listenerChanged(s) } }

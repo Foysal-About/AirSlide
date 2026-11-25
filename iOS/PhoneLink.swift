@@ -138,10 +138,10 @@ final class PhoneLink: ObservableObject {
     private func restart() { deactivate(); activate() }
 
     private func connectOnce() async {
-        guard let mac = macs.first else { link = .searching; return }
+        guard !macs.isEmpty else { link = .searching; return }
         link = .searching
         do {
-            let (ch, macName) = try await open(mac)
+            let (ch, macName) = try await open()
             let s = Session(channel: ch, peerName: macName, sink: FolderSink(folder: documents))
             await s.start()
             session = s
@@ -155,10 +155,11 @@ final class PhoneLink: ObservableObject {
         ghost = nil
     }
 
-    private func open(_ mac: Peer) async throws -> (SecureChannel, String) {
-        guard let secret = store.secret(for: mac.id) else { throw AirSlideError.notPaired }
-        let endpoint = try await find(mac.id)
-        let ch = SecureChannel(NWConnection(to: endpoint, using: .tcp), secret: secret)
+    /// Connects to whichever paired Mac is found nearby first.
+    private func open() async throws -> (SecureChannel, String) {
+        let (endpoint, macID) = try await find(Set(macs.map(\.id)))
+        guard let secret = store.secret(for: macID) else { throw AirSlideError.notPaired }
+        let ch = SecureChannel(NWConnection(to: endpoint, using: Wire.params), secret: secret)
         try await ch.start()
         try await ch.send(.hello(deviceID: deviceID, name: UIDevice.current.name, version: Wire.version))
         let reply = try await withTimeout(10) { try await ch.receiveMessage() }
@@ -167,12 +168,12 @@ final class PhoneLink: ObservableObject {
         return (ch, macName)
     }
 
-    private func find(_ macID: String) async throws -> NWEndpoint {
-        try await withCheckedThrowingContinuation { (c: CheckedContinuation<NWEndpoint, Error>) in
+    private func find(_ macIDs: Set<String>) async throws -> (NWEndpoint, String) {
+        try await withCheckedThrowingContinuation { (c: CheckedContinuation<(NWEndpoint, String), Error>) in
             let q = DispatchQueue(label: "com.airslide.browser")
-            let b = NWBrowser(for: .bonjourWithTXTRecord(type: Wire.service, domain: nil), using: .tcp)
+            let b = NWBrowser(for: .bonjourWithTXTRecord(type: Wire.service, domain: nil), using: Wire.params)
             var done = false
-            func finish(_ r: Result<NWEndpoint, Error>) {
+            func finish(_ r: Result<(NWEndpoint, String), Error>) {
                 guard !done else { return }
                 done = true
                 b.cancel()
@@ -180,7 +181,7 @@ final class PhoneLink: ObservableObject {
             }
             b.browseResultsChangedHandler = { results, _ in
                 for r in results {
-                    if case .bonjour(let txt) = r.metadata, txt["id"] == macID { finish(.success(r.endpoint)); return }
+                    if case .bonjour(let txt) = r.metadata, let id = txt["id"], macIDs.contains(id) { finish(.success((r.endpoint, id))); return }
                 }
             }
             b.stateUpdateHandler = { if case .failed(let e) = $0 { finish(.failure(e)) } }
@@ -202,7 +203,7 @@ final class PhoneLink: ObservableObject {
 
     func startDiscovery() {
         guard browser == nil, macs.isEmpty else { return }
-        let b = NWBrowser(for: .bonjourWithTXTRecord(type: Wire.service, domain: nil), using: .tcp)
+        let b = NWBrowser(for: .bonjourWithTXTRecord(type: Wire.service, domain: nil), using: Wire.params)
         b.browseResultsChangedHandler = { [weak self] results, _ in
             let list = results.compactMap { r -> NearbyMac? in
                 guard case .bonjour(let txt) = r.metadata, let id = txt["id"] else { return nil }
@@ -226,7 +227,7 @@ final class PhoneLink: ObservableObject {
         pairUI = .connecting(mac.name)
         let priv = Curve25519.KeyAgreement.PrivateKey()
         let phonePub = priv.publicKey.rawRepresentation
-        let ch = SecureChannel(NWConnection(to: mac.endpoint, using: .tcp))
+        let ch = SecureChannel(NWConnection(to: mac.endpoint, using: Wire.params))
         defer { ch.close() }
         do {
             try await withTimeout(10) { try await ch.start() }
